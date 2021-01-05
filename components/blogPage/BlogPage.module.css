@@ -1,7 +1,7 @@
+/* FIRST POST */
 .paycheque {
   border-radius: 5px;
   height: 400px;
-  widows: 100%;
 }
 .title {
   font-weight: 600;
@@ -69,10 +69,6 @@
   align-self: center;
   height: 200px;
   grid-template-columns: repeat(3, 2fr);
-}
-
-/* LAYOUT */
-.header {
 }
 
 /* CREATE POST */

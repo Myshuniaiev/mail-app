@@ -10,7 +10,9 @@ import {
   getServerPosts,
 } from "../redux/selectors/posts-selector";
 import Layout from "../components/Layout";
+import Media from "react-media";
 
+// HOME PAGE (BLOG)
 interface PropsType {
   serverPosts: Array<postType> | null;
   localPosts: Array<postType>;
@@ -34,8 +36,10 @@ function Blog({ serverPosts, localPosts, getPostsThunkCreator }: PropsType) {
         about={
           "Real stories & opinions about running an independent membership business"
         }
-      />{" "}
-      {Posts(posts, localPosts)}
+      />
+      {/* <Media queries={{ small: { minWidth: 599 } }}> */}
+        {Posts(posts, localPosts)}
+      {/* </Media> */}
     </>
   );
 }

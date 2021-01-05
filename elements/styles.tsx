@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const Button = styled.a<{alert: boolean}>`
+// BUTTON
+export const Button = styled.a<{ alert: boolean }>`
   font-weight: 300;
   font-family: "Poppins", sans-serif;
   border: 1px solid white;
@@ -20,7 +21,17 @@ export const Button = styled.a<{alert: boolean}>`
     border: 1px solid ${(props) => (props.alert ? "rgb(138, 36, 36)" : "grey")};
   }
 `;
+
+// HR - LINE
 export const Hr = styled.hr`
   border: 1px solid rgb(93, 109, 116);
   width: 1115px;
+`;
+
+// HR - LINE
+export const Response = styled.p<{ response: string }>`
+  color: ${(props) => (props.response == "Success" ? "green" : "red")};
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
 `;

@@ -8,3 +8,7 @@ export const getLocalPosts = (state) => {
 export const getServerPosts = (state) => {
   return state.postsPage.serverPosts;
 };
+// GET RESPONSE SELECTOR
+export const getResponse = (state) => {
+  return state.postsPage.response;
+};

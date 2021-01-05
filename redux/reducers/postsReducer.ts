@@ -1,7 +1,10 @@
 import axios from "axios";
 import { ThunkAction } from "redux-thunk";
 import { RootState } from "../store";
+
+// TYPES
 const SET_POSTS = "SET-POST";
+const SET_RESPONSE = "SET-RESPONSE";
 
 // POSTS TYPE
 export type postType = {
@@ -39,9 +42,12 @@ let initialState = {
     },
   ] as Array<postType>,
   serverPosts: [] as Array<postType> | null,
+  response: "" as string,
 };
 
+// TYPE FOR INITIAL STATE
 type initialStateType = typeof initialState;
+
 // THIS REDUCER TAKES IN THE STATE AND THE ACTION CALLED
 const postsReducer = (
   state: initialStateType = initialState,
@@ -52,13 +58,17 @@ const postsReducer = (
     case SET_POSTS: {
       return { ...state, serverPosts: action.posts };
     }
+    // SET RESPONSE
+    case SET_RESPONSE: {
+      return { ...state, response: action.response };
+    }
     default:
       return state;
   }
 };
 
 // ACTIONS
-type ActionType = setPostsType;
+type ActionType = setPostsType | setResponseType;
 
 // SET POSTS FROM SERVER ACTION CREATOR TYPE
 type setPostsType = {
@@ -69,6 +79,16 @@ type setPostsType = {
 export const setPosts = (posts: Array<postType>): setPostsType => ({
   type: SET_POSTS,
   posts,
+});
+// SET POSTS FROM SERVER ACTION CREATOR TYPE
+type setResponseType = {
+  type: typeof SET_RESPONSE;
+  response: string;
+};
+// SET POSTS FROM SERVER ACTION CREATOR
+export const setResponse = (response: string): setResponseType => ({
+  type: SET_RESPONSE,
+  response,
 });
 
 // THUNKS
@@ -96,7 +116,7 @@ export const createPostThunkCreator = (
   body: string,
   id: string | number
 ): ThunkType => {
-  return async () => {
+  return async (dispatch) => {
     debugger;
     try {
       let data = await axios.post<getPostsType>(
@@ -107,9 +127,10 @@ export const createPostThunkCreator = (
           id,
         }
       );
-
+      dispatch(setResponse("Success"));
       console.log(data);
     } catch (error) {
+      dispatch(setResponse("Something goes wrong"));
       console.log("Something goes wrong");
     }
   };

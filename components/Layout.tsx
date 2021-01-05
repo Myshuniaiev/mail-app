@@ -7,6 +7,7 @@ import newBg from "../images/new-background.png";
 import blogBg from "../images/background.png";
 import logo from "../images/mail-app-removebg.png";
 
+// STYLED COMPONENT
 const Wrapper = styled.section<{ back: string }>`
   height: 400px;
   background-image: url(${(props) => props.back == "new" && newBg}
@@ -15,6 +16,8 @@ const Wrapper = styled.section<{ back: string }>`
   background-repeat: no-repeat;
   background-size: cover;
 `;
+
+// MAIN LAYOUT FOR COMPONENTS
 
 export default function Layout({ title, back, about }) {
   return (

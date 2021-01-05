@@ -50,9 +50,6 @@ export function Posts(posts, localPosts) {
             <p className={css.class}>REDUX POST</p>
             <p className={css.title}>{post.title}</p>
             <p className={css.body}>{post.body}</p>
-            <Link href={`/posts/${post.id}`}>
-              <Button alert={false}>View post</Button>
-            </Link>
           </div>
         ))}
       </div>

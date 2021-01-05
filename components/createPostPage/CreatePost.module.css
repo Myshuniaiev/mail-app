@@ -14,7 +14,6 @@
 .paycheque {
   border-radius: 5px;
   height: 400px;
-  widows: 100%;
 }
 .title {
   font-weight: 600;
@@ -51,6 +50,7 @@
 
 .button {
   font-weight: 300;
+  outline: none;
   font-family: "Poppins", sans-serif;
   border: 1px solid white;
   border-radius: 90px;

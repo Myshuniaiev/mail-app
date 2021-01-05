@@ -2,13 +2,16 @@ import React from "react";
 import { Field, reduxForm, reset } from "redux-form";
 import css from "./CreatePost.module.css";
 import { InjectedFormProps } from "redux-form";
+import { Response } from "../../elements/styles";
+// REDUX FORM
+interface Props {
+  response: string;
+}
 
-interface Props {}
-
-let CreatePostForm: React.FC<Props & InjectedFormProps<{}, Props>> = (
-  props: any
-) => {
-  const { handleSubmit } = props;
+let CreatePostForm: React.FC<Props & InjectedFormProps<{}, Props>> = ({
+  response,
+  handleSubmit,
+}) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -38,7 +41,8 @@ let CreatePostForm: React.FC<Props & InjectedFormProps<{}, Props>> = (
           type="number"
         />
       </div>
-      <button  className={css.button} type="submit">
+      <Response response={response}>{response}</Response>
+      <button className={css.button} type="submit">
         Submit
       </button>
     </form>

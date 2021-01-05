@@ -4,6 +4,8 @@ import Layout from "../../components/Layout";
 import css from "../../components/createPostPage/CreatePost.module.css";
 import about from "../../images/about-post.png";
 import { NextPageContext } from "next";
+
+// ONE POST
 export default function Post({ post }) {
   return (
     <div>
@@ -24,6 +26,7 @@ export default function Post({ post }) {
   );
 }
 
+// GET POST (FETCH)
 Post.getInitialProps = async ({ query }: NextPageContext) => {
   const res = await fetch(`https://simple-blog-api.crew.red/posts/${query.id}`);
   const post = await res.json();
