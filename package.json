@@ -1,0 +1,33 @@
+{
+  "name": "mail-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@types/redux": "^3.6.0",
+    "axios": "^0.21.1",
+    "next": "10.0.4",
+    "next-images": "^1.6.2",
+    "nextjs-progressbar": "^0.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-form": "^8.3.7",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.20",
+    "@types/react": "^17.0.0",
+    "@types/react-redux": "^7.1.15",
+    "@types/redux-form": "^8.3.1",
+    "@types/styled-components": "^5.1.7",
+    "babel-plugin-styled-components": "^1.12.0",
+    "typescript": "^4.1.3"
+  }
+}

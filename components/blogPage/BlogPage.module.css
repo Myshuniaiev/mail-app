@@ -1,0 +1,88 @@
+.paycheque {
+  border-radius: 5px;
+  height: 400px;
+  widows: 100%;
+}
+.title {
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+}
+.body {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(93, 109, 116);
+  font-family: "PT Serif", serif;
+}
+.author {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+.firstPost {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+.data {
+  width: 30%;
+  margin-left: 5%;
+}
+
+.postHr {
+  border: 1px solid rgb(93, 109, 116);
+  width: 1115px;
+}
+
+/* POST */
+.post {
+  width: 80%;
+}
+.class {
+  color: rgb(0, 119, 255);
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+.newPost {
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid white;
+  border-radius: 90px;
+  padding: 5px 10px;
+  margin: 20px;
+  font-size: 15px;
+  color: rgb(138, 36, 36);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: auto;
+  order: 2;
+}
+
+/* POSTS */
+.posts {
+  margin-left: 6%;
+  row-gap: 20%;
+  display: grid;
+  align-self: center;
+  height: 200px;
+  grid-template-columns: repeat(3, 2fr);
+}
+
+/* LAYOUT */
+.header {
+}
+
+/* CREATE POST */
+.input {
+  width: 375px;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #818181;
+  background-color: black;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
